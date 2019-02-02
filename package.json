@@ -1,0 +1,50 @@
+{
+  "name": "spotify-router",
+  "version": "1.0.0",
+  "description": "Express routes for Spotify API",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src",
+    "build": "npm run clean && npm run babel",
+    "clean": "rm -rf lib",
+    "babel": "babel src --out-dir lib"
+  },
+  "jest": {
+    "preset": "amex-jest-preset",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrys-golden/spotify-router.git"
+  },
+  "keywords": [
+    "express",
+    "spotify"
+  ],
+  "author": "Jonathan Golden",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/emrys-golden/spotify-router/issues"
+  },
+  "homepage": "https://github.com/emrys-golden/spotify-router#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "amex-jest-preset": "^5.0.0",
+    "babel-cli": "^6.26.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.0.0",
+    "pre-commit": "^1.2.2"
+  }
+}
